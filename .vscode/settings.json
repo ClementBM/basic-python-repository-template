@@ -1,7 +1,7 @@
 {
     "python.linting.enabled": true,
     "python.linting.mypyEnabled": true,
-    "python.pythonPath": ".venv/bin/python",
+    "python.pythonPath": "${env:PYTHON_VENV_LOC}",
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
