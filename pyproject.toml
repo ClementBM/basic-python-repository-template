@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "basic-python-repository-template"
+version = "0.1.0"
+description = "Basic python repository template"
+authors = ["Clément Brutti-Mairesse <clement.brutti.mairesse@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+pytest = "*"
+mypy = "*"
+jupyter = "*"
+notebook = "*"
+ipykernel = "*"
+black = "*"
+sphinx = "*"
+sphinx-rtd-theme = "*"
+coverage = "*"
+setuptools = "*"
+wheel = "*"
+twine = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
