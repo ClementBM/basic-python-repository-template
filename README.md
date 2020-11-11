@@ -1,25 +1,30 @@
 # Introduction
 Template repository for python package
 
-Manuel steps to generate and publish the package to TestPyPI, documentation from [packaging.python](https://packaging.python.org/tutorials/packaging-projects/)
+Manuel steps to generate and publish the package to TestPyPI with poetry, documentation from [packaging.python](https://python-poetry.org/docs/)
 
-Generate distribution archives
+Build the package, generate distribution archives
 ```shell
-python setup.py sdist bdist_wheel
+poetry build
 ```
 
-Upload distribution archive to TestPyPI (a separate instance of the Python Package Index)
+Add Test PyPI as an alternate package repository
 ```shell
-python -m twine upload --repository testpypi dist/*
+poetry config repositories.testpypi https://test.pypi.org/legacy/
+```
+
+Upload/publish package/distribution archive to TestPyPI (a separate instance of the Python Package Index)
+```shell
+poetry publish -r testpypi
 ```
 
 # Installation
 ```shell
-python -m pip install --index-url https://test.pypi.org/simple/ --no-deps mypkg128
+pip install --index-url https://test.pypi.org/simple/ mypkg128
 ```
 or
 ```shell
-pipenv install --pypi-mirror https://test.pypi.org/simple/ mypkg128
+pip3 install --index-url https://test.pypi.org/simple/ mypkg128
 ```
 
 # Usage
