@@ -40,7 +40,7 @@ wheel = "*"
 twine = "*"
 
 # New scripts
-# After installing the mypackage package, running mypackage will call the main() function from mypackage/__init__.py.
+# After installing the mypkg128 package, running mypkg128 will call the main() function from mypkg128/__init__.py.
 # [tool.poetry.scripts]
 # mypkg128 = 'mypkg128:main'
 
