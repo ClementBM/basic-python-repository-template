@@ -27,6 +27,12 @@ or
 pip3 install --index-url https://test.pypi.org/simple/ mypkg128
 ```
 
+# Local development installation
+Add poetry managed project as dependencies in development mode
+```shell
+poetry add ../relative_path/to/mypkg128
+```
+
 # Usage
 ```python
 from mypkg128 import main
