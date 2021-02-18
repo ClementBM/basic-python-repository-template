@@ -35,9 +35,6 @@ black = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 coverage = "*"
-setuptools = "*"
-wheel = "*"
-twine = "*"
 
 # New scripts
 # After installing the mypkg128 package, running mypkg128 will call the main() function from mypkg128/__init__.py.
