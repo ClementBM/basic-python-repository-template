@@ -1,6 +1,36 @@
 # Introduction
-Template repository for python package
+Template repository for python package.
 
+After duplicating this repository, you may rename the default package name, which is `mypkg128`, with your package name wherever it is declared.
+So rename it in:
+* `pyproject.toml`
+* `tests.yaml`
+* `launch.json`
+
+# Development setup
+## Prerequisites
+This following packages must be installed
+* python
+* poetry
+* git
+
+## Configuration
+* `poetry` configuration, add environment variable `POETRY_VIRTUALENVS_IN_PROJECT=true`
+* `vscode` configuration, add environment variable `PYTHON_VENV_LOC`
+  * on windows: `PYTHON_VENV_LOC=.venv\\bin\\python.exe`
+  * on linux: `PYTHON_VENV_LOC=.venv/bin/python`
+* `git` configuration
+```shell
+git config --global user.name 'your name'
+git config --global user.email 'your email'
+```
+
+## Initialization
+* First setup `poetry install`
+* Then `poetry shell`
+
+# Build and publish with poetry
+## Build
 Manuel steps to generate and publish the package to TestPyPI with poetry, documentation from [packaging.python](https://python-poetry.org/docs/)
 
 Build the package, generate distribution archives
@@ -8,6 +38,7 @@ Build the package, generate distribution archives
 poetry build
 ```
 
+## Publish to Test PyPI
 Add Test PyPI as an alternate package repository
 ```shell
 poetry config repositories.testpypi https://test.pypi.org/legacy/
@@ -18,25 +49,13 @@ Upload/publish package/distribution archive to TestPyPI (a separate instance of 
 poetry publish -r testpypi
 ```
 
-# Installation
+## Installation with pip
 ```shell
 pip install --index-url https://test.pypi.org/simple/ mypkg128
 ```
 or
 ```shell
 pip3 install --index-url https://test.pypi.org/simple/ mypkg128
-```
-
-# Local development installation
-Add poetry managed project as dependencies in development mode
-```shell
-poetry add ../relative_path/to/mypkg128
-```
-
-# Usage
-```python
-from mypkg128 import main
-main.test()
 ```
 
 # Code of Conduct
